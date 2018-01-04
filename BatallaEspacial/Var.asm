@@ -198,10 +198,10 @@ enemiesConfigEnd:
 udgsCommon:
 	DB 36, 66, 153, 189, 255, 24, 36, 90		; 144	Nave
 	DB 0, 24, 36, 90, 90, 36, 24, 0				; 145	Disparo
-	DB 24, 24, 24, 24, 24, 24, 24, 24			; 146	Explosión vertical |
-	DB 3, 7, 14, 28, 56, 112, 224, 192			; 147	Explosión diagonal /
-	DB 0, 0, 0, 255, 255, 0, 0, 0				; 148	Explosión horizontal - 
-	DB 192, 224, 112, 56, 28, 14, 7, 3			; 149	Explosión diagonal \
+	DB 0, 0, 0, 0, 36, 90, 36, 24				; 146	Explosión 1
+	DB 0, 0, 0, 20, 42, 52, 36, 24				; 147	Explosión 2
+	DB 0, 0, 12, 18, 42, 86, 100, 24			; 148	Explosión 3
+	DB 32, 81, 146, 213, 169, 114, 44, 24		; 149	Explosión 4
 	DB 63, 106, 255, 184, 243, 167, 239, 174	; 150	Esquina superior izquierda
 	DB 255, 170, 255, 0, 255, 255, 0, 0			; 151	Horizontal superior
 	DB 252, 174, 251, 31, 205, 231, 245, 119	; 152	Esquina superior derecha
