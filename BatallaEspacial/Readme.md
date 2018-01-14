@@ -1,6 +1,6 @@
 BatallaEspacial
 
-Intentando quitarme la espina que me quedaba de mi infancia, encontre un curso sobre asm para ZX Spectrum en 
+Intentando quitarme la espina que me quedaba de mi infancia, encontre un curso sobre ensamblador para ZX Spectrum en 
 https://wiki.speccy.org/cursos/ensamblador/indice
 
 Aunque todavía no he terminado el curso, llegado al capítulo 9 referente a las interrupciones me animé a llevar
