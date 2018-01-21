@@ -4,6 +4,15 @@
 ; Archivo que contiene rutinas de conversión.
 ; -----------------------------------------------------------------------------
 
+; -----------------------------------------------------------------------------
+; Convierte un número BCD a binario.
+;
+; Entrada:	A	->	Número BCD
+;
+; Salida:	A	->	Número binario
+;
+; Código tomado de https://www.msx.org/forum/development/msx-development/bcdhex-conversion-asm
+; -----------------------------------------------------------------------------
 BCD2bin:
 	; Preserva el valor de los registros
 	PUSH BC
