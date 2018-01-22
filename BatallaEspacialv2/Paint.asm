@@ -80,15 +80,11 @@ DeleteCountdown:
 	RET
 
 ; -----------------------------------------------------------------------------
-; Efecto de desvanecimento de la pantalla
+; Efecto de desvanecimento de la pantalla.
+;
+; Altera el valor de los registros AF, BC y HL.
 ; -----------------------------------------------------------------------------
 FadeScreen:
-	; Preserva los registros
-	PUSH AF
-	PUSH BC
-	PUSH DE
-	PUSH HL
-
 	; El bucle exterior se repite 8 veces, 1 por cada scanline
 	LD B, 8
 
@@ -161,12 +157,6 @@ FadeScreen_save:
 	DJNZ FadeScreen_loop1
 
 FadeScreen_end:
-	; Recupera los registros
-	POP HL
-	POP DE
-	POP BC
-	POP AF
-
 	RET
 
 ; -----------------------------------------------------------------------------
