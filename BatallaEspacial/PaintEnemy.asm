@@ -45,7 +45,7 @@ AnimeEnemies_posY:
 	LD A, B
 	
 	; Se queda solo con la coordenada desechando los bits 5 a 7
-	AND 00011111b
+	AND %00011111
 	
 	; Evalúa si el enemigo se desplaza hacia arriba o hacia abajo
 	BIT 7, C
@@ -96,7 +96,7 @@ AnimeEnemies_posY_end:
 	LD A, B
 	
 	; Se queda con los bit 7, 6, y 5
-	AND 11100000b
+	AND %11100000
 	
 	; Pone la coordenada Y
 	OR E
@@ -117,7 +117,7 @@ AnimeEnemies_posX:
 	LD A, C
 	
 	; Se queda solo con la coordenada X desechando los bits 6 a 7
-	AND 00111111b
+	AND %00111111
 	
 	; Evalúa si el enemigo se desplaza hacia izquierda o hacia derecha
 	BIT 6, C
@@ -168,7 +168,7 @@ AnimeEnemies_posX_end:
 	LD A, C
 	
 	; Se queda con los bits de dirección del movimineto, bits 6 a 7
-	AND 11000000b
+	AND %11000000
 	
 	; Pone coordenada X
 	OR E
@@ -233,7 +233,7 @@ DeleteEnemies_loop:
 
 DeleteEnemies_loop1:
 	; Se queda solo con la posición Y, despreciando los bits 5 a 7
-	AND 00011111b
+	AND %00011111
 	
 	; Carga la coordenada Y en B
 	LD B, A
@@ -245,7 +245,7 @@ DeleteEnemies_loop1:
 	LD A, (HL)
 	
 	; Se queda con la posición X, despreciando los bits 6 y 7
-	AND 00111111b
+	AND %00111111
 	
 	; Carga la coordenada X en C
 	LD C, A
@@ -298,7 +298,7 @@ PaintEnemies_loop:
 	JR Z, PaintEnemies_noPrint
 	
 	; Se queda solo con la posición Y, desechando los bits 5 a 7
-	AND 00011111b
+	AND %00011111
 	
 	; Carga la coordenada Y en B
 	LD B, A
@@ -310,7 +310,7 @@ PaintEnemies_loop:
 	LD A, (HL)
 	
 	; Se queda con la posición X, desechando los bits 6 y 7
-	AND 00111111b
+	AND %00111111
 	
 	; Carga la coordenada X en C
 	LD C, A
@@ -326,7 +326,7 @@ PaintEnemies_loop:
 	LD A, (HL)
 	
 	; Se queda con la dirección de movimiento
-	AND 11000000b
+	AND %11000000
 	
 	; Lo rota dos veces hacia la izquierda para dejar el valor en los bits 0 y 1
 	; y usarlo como índice para obtener el carácter
@@ -414,7 +414,7 @@ ResetActiveEnemiesConfig_loop:
 	LD A, (HL)
 
 	; Se queda solo con el indicador de enemigo activo
-	AND 10000000b
+	AND %10000000
 
 	; Carga el valor en C
 	LD C, A
@@ -423,7 +423,7 @@ ResetActiveEnemiesConfig_loop:
 	LD A, (DE)
 
 	; Se queda solo con la coordenada
-	AND 00011111b
+	AND %00011111
 
 	; Resetea la coordenada Y actual con la coordenada inicial
 	OR C
@@ -518,7 +518,7 @@ ResetEnemiesDir_loop1:
 	LD A, (HL)
 
 	; Se queda solo con la coordenada
-	AND 00111111b
+	AND %00111111
 
 	; La carga en C
 	LD C, A

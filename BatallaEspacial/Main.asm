@@ -4,7 +4,6 @@
 ; Se ha tomado la rutina de impresión de números BCD de las fichas de código máquina de MicroHobby
 ; La rutina Ramdom se ha sido tomada de http://old8bits.blogspot.com.es/2016/04/como-escribir-juegos-para-el-zx_18.html
 ; Si falta alguien a quien nombrar, que lo haga saber y se incluirá
-; Solo funciona en 48K y +
 
 	ORG 32768
 
@@ -163,7 +162,7 @@ Game_ship:
 	LD A, D
 	
 	; Desecha el bit de disparo
-	AND 00001111b
+	AND %00001111
 	
 	; Comprueba si hay algún bit de dirección activo
 	OR A
@@ -213,7 +212,7 @@ Game_loopChangeLevel:
 Game_over:
 	; Activa la pausa
 	LD A, (flags1)
-	AND 00001000b
+	AND %00001000
 	LD (flags1), A
 
 	; Limpia la pantalla
@@ -268,7 +267,7 @@ Game_over:
 Game_win:
 	; Activa la pausa
 	LD A, (flags1)
-	AND 00001000b
+	AND %00001000
 	LD (flags1), A
 
 	; Limpia la pantalla
@@ -394,9 +393,9 @@ InitLevel:
 	; Activa la cuenta atrás y la pausa
 	LD A, (flags1)
 	; Pone los flags de cuenta atrás y pausa a 0
-	AND 11110011b
+	AND %11110011
 	; Pone los flags de cuenta atrás y pausa a 1
-	OR 00001100b
+	OR %00001100
 	LD (flags1), A
 
 InitLevel_loop:

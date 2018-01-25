@@ -16,12 +16,12 @@ ClsScreen:
 
 	; Limpia la pantalla con fondo negro, brillo y tinta según velocidad de enemigos en la pantalla 1
 	LD HL, 23693
-	LD A, 01000110b
+	LD A, %01000110
 	LD (HL), A
 
 	; Fondo negro, brillo y tinta blanca en la pantalla 2
 	LD HL, 23624
-	LD (HL), 01000111b
+	LD (HL), %01000111
 
 	; Limpia la pantalla
 	CALL ROMCLS

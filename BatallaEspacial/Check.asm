@@ -52,7 +52,7 @@ CheckCrash_fireEnemies:
 	JR Z, CheckCrash_fireEnemiesNoCrash
 	
 	; Se queda con la coordenada Y del enemigo
-	AND 00011111b
+	AND %00011111
 	
 	; Lo compara con la coordenada Y del disparo y si no son iguales, salta
 	CP D
@@ -70,7 +70,7 @@ CheckCrash_fireEnemies:
 	LD A, (HL)
 	
 	; Se queda con la coordenada X del enemigo, ya que también tiene los indicadores de dirección de movimiento
-	AND 00111111b
+	AND %00111111
 	
 	; Lo compara con la coordenada X del disparo y si no son iguales, salta
 	CP D
@@ -210,7 +210,7 @@ CheckCrash_shipEnemies:
 	JR Z, CheckCrash_shipEnemiesNoCrash
 	
 	; Se queda con la coordenada Y del enemigo
-	AND 00011111b
+	AND %00011111
 	
 	; Lo compara con la coordenada Y de la nave y si no son iguales, salta
 	CP D
@@ -222,7 +222,7 @@ CheckCrash_shipEnemies:
 	LD A, (HL)
 	
 	; Se queda con la coordenada X del enemigo, también contiene los indicadores de dirección del movimiento
-	AND 00111111b
+	AND %00111111
 	
 	; Lo compara con la coordenada X de la nave y si no son iguales, salta
 	CP E
@@ -337,7 +337,7 @@ CheckKey:
 	CPL
 	
 	; Se queda solo con los bits 0 a 5. Importante pues varía según ISSUE
-	AND 00011111b
+	AND %00011111
 	
 	; Comprueba si no se ha pulsado ninguna tecla
 	OR A
@@ -411,7 +411,7 @@ CheckKey_end:
 	LD A, D
 	
 	; Se queda solo con los bit de izquierda y derecha
-	AND 00000011b
+	AND %00000011
 	
 	; Comprueba si están los dos activos
 	CP 3
@@ -421,7 +421,7 @@ CheckKey_end:
 	
 	; Desactiva los bits de izquierda y derecha por estar los dos activos
 	LD A, D
-	AND 00010000b
+	AND %00010000
 	LD D, A
 	
 	RET
@@ -443,7 +443,7 @@ WaitKey:
 	CPL
 	
 	; Se queda solo con los bits 0 a 5. Importante pues varía según ISSUE
-	AND 00011111b
+	AND %00011111
 	
 	; Comprueba si no se ha pulsado enter
 	BIT 0, A
@@ -461,7 +461,7 @@ WaitKey:
 	CPL
 	
 	; Se queda solo con los bits 0 a 5. Importante pues varía según ISSUE
-	AND 00011111b
+	AND %00011111
 	
 	; Comprueba si no se ha pulsado 0
 	BIT 0, A

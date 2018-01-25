@@ -5,7 +5,6 @@
 ; La rutina Ramdom se ha tomado de http://old8bits.blogspot.com.es/2016/04/como-escribir-juegos-para-el-zx_18.html
 ; La rutina BCD2Bin se ha tomado de https://www.msx.org/forum/development/msx-development/bcdhex-conversion-asm
 ; Si falta alguien a quien nombrar, que lo haga saber y se incluirá
-; Solo funciona en modo 48K
 
 	ORG 32768
 
