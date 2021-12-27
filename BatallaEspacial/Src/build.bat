@@ -1,1 +1,0 @@
-pasmo --name Marciano --tapbas Main.asm BatallaEspacial.tap --public
