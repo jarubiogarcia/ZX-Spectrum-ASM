@@ -1,1 +1,0 @@
-pasmo --name ZXPiano --tapbas Main.asm MusicaMaestro.tap --public
