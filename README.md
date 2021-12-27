@@ -1,14 +1,7 @@
 # Z80Asm
 Proyectos de ensamblador para Z80.
 
-Para compilar con PASMO.
+Programas desarrollados en ensamblador para ZX Spectrum, acompañados de tutoriales y código fuente, publicados en mi blog https://espamatica.com/.
 
-Referencias:
-
-  https://wiki.speccy.org/cursos/ensamblador/indice
-  
-  Fichas de ensamblador de MicroHobby
-  
-  http://old8bits.blogspot.com.es/2016/04/como-escribir-juegos-para-el-zx_18.html
-  
-  https://www.msx.org/forum/development/msx-development/bcdhex-conversion-asm
+## Ensamblador para ZX Spectrum 16K, Pong
+https://espamatica.com/ensamblador-zx-spectrum-pong-0xff/
